@@ -52,16 +52,14 @@ def AmzonParser(url):
 
 def ReadAsin():
     # AsinList = csv.DictReader(open(os.path.join(os.path.dirname(__file__),"Asinfeed.csv")))
-    AsinList = ['B0046UR4F4',
-    'B00JGTVU5A',
-    'B00GJYCIVK',
-    'B00EPGK7CQ',
-    'B00EPGKA4G',
-    'B00YW5DLB4',
-    'B00KGD0628',
-    'B00O9A48N2',
-    'B00O9A4MEW',
-    'B00UZKG8QU',]
+    AsinList = ['B01N7XW7LN',
+    'B01MRC85DW',
+    'B00AAL2LP6',
+    'B01MRC85DW',
+    'B004K4GNF8',
+    'B01IDGJVKW',
+    'B01944D05E',
+    'B00O6YAP0Q',]
     extracted_data = []
     for i in AsinList:
         url = "http://www.amazon.com/dp/"+i
