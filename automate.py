@@ -2,24 +2,13 @@ import webbrowser
 import requests
 import bs4
 
+exampleFile = open('example.html')
+exampleSoup = bs4.BeautifulSoup(exampleFile.read(), "lxml")
 
-res = requests.get('https://automatetheboringstuff.com/chapter11/')
-res.raise_for_status()
-fileName = open(res.text)
-# The bs4.BeautifulSoup() function returns is a BeautifulSoup object.
-noStarchSoup = bs4.BeautifulSoup(fileName.read(), "lxml")
-elems = noStarchSoup.select(".book")
+elems = exampleSoup.select("#author")
 print(type(elems))
 print(len(elems))
 print(type(elems[0]))
-elems[0].getText()
-str(elems[0])
-elems[0].attrs
-
-#print(type(noStarchSoup))
-
-
-# playFile = open("romeojuliet.text", "wb")
-# for chunk in res.iter_content(100000):
-#     playFile.write(chunk)
-# playFile.close()
+print(elems[0].getText())
+print(str(elems[0]))
+print(elems[0].attrs)
