@@ -17,15 +17,14 @@ with open('data.html', 'wb') as f:
     for block in response.iter_content(1024):
         f.write(block)
 
-f.close()
 
 # Retrieve top search result links.
 soup = bs4.BeautifulSoup(open("data.html"), "lxml")
-print("Jelo")
 # Open a browser tab for each result.
 linkElems = soup.select('.r a')
 print(linkElems)
-numOpen = min(2, len(linkElems))
+numOpen = min(5, len(linkElems))
 for i in range(numOpen):
-    print("Working?")
     webbrowser.open('http://google.com' + linkElems[i].get('href'))
+
+f.close()
