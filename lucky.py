@@ -5,8 +5,10 @@ import requests, sys, webbrowser, bs4
 
 print('Loading...')
 
+search = raw_input("Please enter a search: ")
+
 with open('data.html', 'wb') as f:
-    response = requests.get('https://automatetheboringstuff.com/chapter11/', stream=True)
+    response = requests.get('http://google.com/search?q=' + ' '.join(search), stream=True)
     response.raise_for_status()
 
     if not response.ok:
@@ -21,7 +23,7 @@ f.close()
 soup = bs4.BeautifulSoup(open("data.html"), "lxml")
 print("Jelo")
 # Open a browser tab for each result.
-linkElems = soup.select('.r title3')
+linkElems = soup.select('.r a')
 print(linkElems)
 numOpen = min(2, len(linkElems))
 for i in range(numOpen):
