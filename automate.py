@@ -13,7 +13,9 @@ def get_data():
     search = get_keywords()
 
     # Search Amazon
-    search_amazon = search[0]+"+"+search[1]
+    a = "+"
+    search_amazon = a.join(search)
+    print(search_amazon)
     with open('amazon.html', 'wb') as amazon:
         response = requests.get('https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=nike' + ' '+search_amazon, headers={
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"
@@ -25,7 +27,9 @@ def get_data():
             amazon.write(block)
 
     # Search Nike
-    search_nike = search[0]+"%20"+search[1]
+    i = "%20"
+    search_nike = i.join(search)
+    print(search_nike)
     with open('nike.html', 'wb') as nike:
         response = requests.get('http://store.nike.com/us/en_us/pw/n/1j7?sl=' + ' '+search_nike, headers={
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"
