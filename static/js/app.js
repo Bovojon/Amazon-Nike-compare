@@ -32,21 +32,21 @@
     // });
 
     .state('home', {
-      url: '/home',
+      url: '/',
       templateUrl: '/static/partials/home.html',
       controller: 'CompareCtrl',
       controllerAs: 'vm'
       })
 
       .state('home.keyword', {
-        // url: '/keyword',
+        url: 'keyword',
         templateUrl: '/static/partials/form-keyword.html',
         controller: 'CompareCtrl',
         controllerAs: 'vm'
       })
 
       .state('home.category', {
-        // url: '/category',
+        url: 'compare',
         templateUrl: '/static/partials/form-category.html',
         controller: 'CompareCtrl',
         controllerAs: 'vm'

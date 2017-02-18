@@ -21,10 +21,7 @@ def operation():
     if request.method == 'POST':
         keyword = request.data
         present_prices(keyword)
-    return send_file("static/partials/results.html")
-
-
-
+    return send_file("static/js/amazon-output.json")
 
 
 
