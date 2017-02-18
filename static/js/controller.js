@@ -9,28 +9,43 @@
   CompareCtrl.$inject = ['$state', '$http'];
   function CompareCtrl($state, $http) {
     var vm = this;
+    vm.submitForm = submitForm;
 
-    function makeCall() {
-      vm.shoe= "roshe one";
+    vm.formData = {};
 
+    function displayResult() {
        $http
-         .get("static/js/data.json")
+         .get("/static/js/amazon-output.json")
          .then(function(response) {
-           vm.elems = response;
            console.log("Success");
-           console.log(response);
+           vm.results = response;
          });
     };
 
-    function postIt() {
-      vm.keyword;
+    function submitForm() {
+      vm.keyword= vm.formData.keyword
       $http
-        .post('/', vm.keyword)
+        .post('/results', vm.keyword)
         .then(function(response) {
-          console.log("Success");
-          console.log(response);
+          displayResult();
+          $state.go('results');
+          vm.results = response;
+          console.log(vm.results)
         });
-    }
+    };
+
+
+
+    // function postIt() {
+    //   vm.keyword;
+    //   $http
+    //     .post('/', vm.keyword)
+    //     .then(function(response) {
+    //       console.log("Success");
+    //       console.log(response);
+    //     });
+    // }
+
 
 
   } // End of controller

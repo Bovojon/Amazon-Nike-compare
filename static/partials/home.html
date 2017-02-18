@@ -1,25 +1,19 @@
-<h1>Compare Nike products on amazon.com and nike.com</h1>
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div id="form-container">
+    <div class="page-header text-center">
+      <h2>Compare Nike products on amazon.com and nike.com</h2>
+      <div id="status-buttons" class="text-center">
+        <a ui-sref-active="active" ui-sref=".keyword"><span>1</span> Keyword</a>
+        <a ui-sref-active="active" ui-sref=".category"><span>2</span> Category</a>
+        <a ui-sref-active="active" ui-sref="results"><span>3</span> Results</a>
+      </div>
+      </div>
 
-<h2>Here's an Angular Demo:</h2>
+      <form id="compare-form" name="compareForm" ng-submit="vm.submitForm()" novalidate>
+          <div id="form-views" ui-view></div>
+      </form>
 
-<div>
-    <input type="text" ng-model="yourName" placeholder="Enter a name here">
-    <hr>
-    <h1>Hello {{ yourName }}</h1>
-
-    <form action="action_page.php">
-      Keyword:<br>
-      <input type="text" name="firstname" ng-model="keyword">
-    </form>
-
-    <button ng-click="postIt()" type="button" name="button">Post!</button>
-    <button ng-click="makeCall()" type="button" name="button">Click!</button>
-    <p>
-      {{ elems }}
-    </p>
-</div>
-
-
-<div class="well">
-  <p>To get more infromation about this app, check out the <a ui-sref="about">about page</a>.</p>
+    </div>
+  </div>
 </div>
