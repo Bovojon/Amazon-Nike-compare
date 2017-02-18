@@ -1,0 +1,13 @@
+body {
+  padding:10px;
+  min-height: 100%;
+}
+
+#content {
+  margin: 0 auto;
+	border: solid 1px;
+}
+
+h1 {
+	text-align: center;
+}

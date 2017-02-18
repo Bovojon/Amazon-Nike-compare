@@ -1,0 +1,25 @@
+<h1>Compare Nike products on amazon.com and nike.com</h1>
+
+<h2>Here's an Angular Demo:</h2>
+
+<div>
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <hr>
+    <h1>Hello {{ yourName }}</h1>
+
+    <form action="action_page.php">
+      Keyword:<br>
+      <input type="text" name="firstname" ng-model="keyword">
+    </form>
+
+    <button ng-click="postIt()" type="button" name="button">Post!</button>
+    <button ng-click="makeCall()" type="button" name="button">Click!</button>
+    <p>
+      {{ elems }}
+    </p>
+</div>
+
+
+<div class="well">
+  <p>To get more infromation about this app, check out the <a ui-sref="about">about page</a>.</p>
+</div>
