@@ -3,13 +3,6 @@
 
 import webbrowser, requests, bs4
 
-# def get_keywords():
-#     search = raw_input("Please enter a search: ")
-#     search = search.lower()
-#     search = search.split(" ")
-#     return search
-
-
 def get_data(keyword):
     search = keyword
 

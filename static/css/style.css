@@ -41,7 +41,7 @@ h1 {
 
 /* we will style the span as the circled number */
 #status-buttons span {
-  background:#009688;
+  background:#00BC8C;
   display:block;
   height:30px;
   margin:0 auto 10px;
@@ -52,7 +52,7 @@ h1 {
 
 /* active buttons turn light green-blue*/
 #status-buttons a.active span {
-  background:#00BC8C;
+  background:#80d5fc;
 }
 
 /* ANIMATION STYLINGS

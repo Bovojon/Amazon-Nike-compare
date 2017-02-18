@@ -22,7 +22,7 @@
           vm.results = response.data;
         })
         .then(function(response) {
-          $timeout(displayData,5000);
+          $timeout(displayData(),5000);
         });
     };
 

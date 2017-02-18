@@ -6,7 +6,6 @@
     'ui.router',
     'ngAnimate',
 
-    // Custom modules
   ])
   .config(configFunction)
 
@@ -17,20 +16,6 @@
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-
-    // $stateProvider.state('home', {
-    //   url: '/home',
-    //   templateUrl: '/static/partials/home.html',
-    //   controller: 'CompareCtrl',
-    //   controllerAs: 'vm'
-    // });
-    // $stateProvider.state('about', {
-    //   url: '/about',
-    //   templateUrl: '../static/partials/about.html',
-    //   controller: 'CompareCtrl',
-    //   controllerAs: 'vm'
-    // });
-
     .state('home', {
       url: '/',
       templateUrl: '/static/partials/home.html',
