@@ -1,161 +1,205 @@
-{
-    "names": [
-        "Nike Men's Legend Short Sleeve Tee", 
-        "Nike Golf Dri-FIT Swoosh Front Cap", 
-        "Nike Men's Roshe One Shoes", 
-        "Nike Men's Revolution 3", 
-        "Nike Short Sleeve Legend-Gray-XL", 
-        "Nike Dri-Fit Head Tie 2.0", 
-        "Nike Womens Pro Cool Training Tights", 
-        "Nike Authentic Dri-FIT Low Profile Swoosh Front Adjustable Cap", 
-        "Nike Men's Legend Long Sleeve Tee", 
-        "Nike Women's Pro Cool 3-Inch Compression Shorts", 
-        "Nike Mens Team Club Fleece Pullover Hooded Sweatshirt", 
-        "Nike Men's Roshe One Shoes", 
-        "Nike Youth Legend Short Sleeve Tee Shirt", 
-        "Nike Club Swoosh Men's Fleece Sweatpants Pants Classic Fit", 
-        "Nike Mens Jogger Club Fleece SweatPants", 
-        "Nike Therma Men's Training Hoodie 800305", 
-        "Men's Nike Pro Cool Top", 
-        "Nike Men's Air Monarch IV", 
-        "Nike Womens Tempo Shorts", 
-        "Nike Womens Pro Cool Training Capris", 
-        "Nike Women's Fitness Bra", 
-        "Nike Men's 3 Pack Web", 
-        "Nike Women's FS Lite Run 2 Running Shoe", 
-        "Nike Mens 3 Pocket Fly Short", 
-        "Nike Brasilia 6 Duffel Bag", 
-        "Nike Women's Free RN Running Shoes", 
-        "Nike Printed Headbands Assorted 6pk", 
-        "Nike Men's Free Rn", 
-        "Nike Women's Air Max Sequent 2 Running Shoes", 
-        "Nike Cotton Cushion Crew Socks", 
-        "Nike Men's Flex 2016 Rn Running Shoe", 
-        "New Nike Men's KO Hoodie 3.0", 
-        "Nike Mens Golf Legacy91 Tech Adjustable Hat", 
-        "Men's Nike Pro Cool Tight", 
-        "Nike Women's Free 5.0+ Running Shoe", 
-        "Nike Juvenate Wmns shoes", 
-        "Nike Club Team Swoosh Backpack", 
-        "Boy's Nike Elite Stripe Short", 
-        "Nike Men's Air Monarch IV", 
-        "Nike Women's Free 5.0+ Running Shoe", 
-        "Nike Men's Flex 2014 RN Running Shoe", 
-        "Nike Womens 3\" Compression Short", 
-        "Nike Women's Free Running Shoe", 
-        "Nike 7\" CHALLENGER Mens Shorts", 
-        "Nike Men's Air Max Tavas Fashion/Running Sneaker", 
-        "Nike Women's Tanjun Running Sneaker", 
-        "Nike Women's Flex Trainer 4 Training Shoe", 
-        "Nike Men's Free 5.0 Running Shoe", 
-        "Nike Mens Team Club Fleece Pullover Hooded Sweatshirt", 
-        "Reebok Men's Print Smooth Ultk Running Shoe", 
-        "Reebok Men's Ros Workout Tr 2.0 Cross-trainer Shoe"
-    ], 
-    "prices": [
-        "$13-$55", 
-        "$17-$24", 
-        "$65-$203", 
-        "$14-$396", 
-        "$15", 
-        "$6-$31", 
-        "$39-$100", 
-        "$18-$29", 
-        "$20-$49", 
-        "$7-$75", 
-        "$39-$59", 
-        "$65-$203", 
-        "$12-$24", 
-        "$30-$85", 
-        "$42-$369", 
-        "$64-$125", 
-        "$22-$200", 
-        "$39-$159", 
-        "$12-$369", 
-        "$29-$75", 
-        "$3-$100", 
-        "$12-$150", 
-        "$59-$160", 
-        "$22-$75", 
-        "$21-$76", 
-        "$69-$227", 
-        "$10-$49", 
-        "$59-$227", 
-        "$74-$369", 
-        "$11-$44", 
-        "$49-$200", 
-        "$40-$100", 
-        "$13-$44", 
-        "$19-$81", 
-        "$69-$200", 
-        "$71-$169", 
-        "$36-$72", 
-        "$8-$75", 
-        "$39-$159", 
-        "$69-$200", 
-        "$42-$369", 
-        "$4-$60", 
-        "$53-$304", 
-        "$13-$78", 
-        "$40-$250", 
-        "$53-$200", 
-        "$37-$139", 
-        "$59-$209", 
-        "$49", 
-        "$84", 
-        "$79"
-    ], 
-    "ratings": [
-        "4.2 out of 5 stars", 
-        "4.6 out of 5 stars", 
-        "4.3 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "4.5 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.3 out of 5 stars", 
-        "4.3 out of 5 stars", 
-        "4.3 out of 5 stars", 
-        "3.4 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "3 out of 5 stars", 
-        "4.6 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "4.5 out of 5 stars", 
-        "4.6 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.3 out of 5 stars", 
-        "4.3 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.6 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.5 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.5 out of 5 stars", 
-        "4.2 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.5 out of 5 stars", 
-        "4.3 out of 5 stars", 
-        "4.4 out of 5 stars", 
-        "4.5 out of 5 stars", 
-        "4.5 out of 5 stars", 
-        "4 out of 5 stars", 
-        "4.5 out of 5 stars", 
-        "4.3 out of 5 stars", 
-        "No ratings.", 
-        "4.3 out of 5 stars"
-    ]
-}
+{ "items": [ {
+    "name": "Nike Men's Legend Short Sleeve Tee", 
+    "price": "$13-$55", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Golf Dri-FIT Swoosh Front Cap", 
+    "price": "$17-$24", 
+    "rating": "4.6 out of 5 stars"
+},{
+    "name": "Nike Men's Roshe One Shoes", 
+    "price": "$65-$203", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Nike Men's Revolution 3", 
+    "price": "$14-$396", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Short Sleeve Legend-Gray-XL", 
+    "price": "$15", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Dri-Fit Head Tie 2.0", 
+    "price": "$6-$31", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Men's Legend Long Sleeve Tee", 
+    "price": "$20-$49", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Authentic Dri-FIT Low Profile Swoosh Front Adjustable Cap", 
+    "price": "$18-$29", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "name": "Nike Womens Pro Cool Training Tights", 
+    "price": "$39-$100", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Women's Pro Cool 3-Inch Compression Shorts", 
+    "price": "$7-$75", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Nike Mens Team Club Fleece Pullover Hooded Sweatshirt", 
+    "price": "$39-$59", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Nike Men's Roshe One Shoes", 
+    "price": "$65-$203", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Nike Youth Legend Short Sleeve Tee Shirt", 
+    "price": "$12-$24", 
+    "rating": "3.4 out of 5 stars"
+},{
+    "name": "Nike Club Swoosh Men's Fleece Sweatpants Pants Classic Fit", 
+    "price": "$30-$85", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Mens Jogger Club Fleece SweatPants", 
+    "price": "$42-$369", 
+    "rating": "3 out of 5 stars"
+},{
+    "name": "Nike Therma Men's Training Hoodie 800305", 
+    "price": "$64-$125", 
+    "rating": "4.6 out of 5 stars"
+},{
+    "name": "Nike Men's Flex 2016 Rn Running Shoe", 
+    "price": "$49-$200", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Men's Nike Pro Cool Top", 
+    "price": "$22-$200", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Men's Air Monarch IV", 
+    "price": "$46-$159", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "name": "Nike Womens Tempo Shorts", 
+    "price": "$12-$369", 
+    "rating": "4.6 out of 5 stars"
+},{
+    "name": "Nike Womens Pro Cool Training Capris", 
+    "price": "$29-$75", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Men's 3 Pack Web", 
+    "price": "$12-$150", 
+    "rating": "4 out of 5 stars"
+},{
+    "name": "Nike Women's Fitness Bra", 
+    "price": "$3-$100", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Women's FS Lite Run 2 Running Shoe", 
+    "price": "$59-$160", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Mens 3 Pocket Fly Short", 
+    "price": "$22-$75", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Brasilia 6 Duffel Bag", 
+    "price": "$21-$76", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Women's Free RN Running Shoes", 
+    "price": "$69-$227", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Women's Air Max Sequent 2 Running Shoes", 
+    "price": "$74-$369", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Nike Printed Headbands Assorted 6pk", 
+    "price": "$10-$49", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Men's Free Rn", 
+    "price": "$59-$227", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Nike Cotton Cushion Crew Socks", 
+    "price": "$11-$44", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "New Nike Men's KO Hoodie 3.0", 
+    "price": "$40-$100", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Mens Golf Legacy91 Tech Adjustable Hat", 
+    "price": "$13-$44", 
+    "rating": "4.6 out of 5 stars"
+},{
+    "name": "Men's Nike Pro Cool Tight", 
+    "price": "$19-$81", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Women's Free 5.0+ Running Shoe", 
+    "price": "$69-$200", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Juvenate Wmns shoes", 
+    "price": "$71-$169", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Club Team Swoosh Backpack", 
+    "price": "$36-$72", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "name": "Boy's Nike Elite Stripe Short", 
+    "price": "$8-$75", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Men's Air Monarch IV", 
+    "price": "$46-$159", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "name": "Nike Women's Free 5.0+ Running Shoe", 
+    "price": "$69-$200", 
+    "rating": "4.2 out of 5 stars"
+},{
+    "name": "Nike Womens 3\" Compression Short", 
+    "price": "$4-$60", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "name": "Nike Women's Free Running Shoe", 
+    "price": "$56-$304", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Nike 7\" CHALLENGER Mens Shorts", 
+    "price": "$13-$78", 
+    "rating": "4.4 out of 5 stars"
+},{
+    "name": "Nike Men's Air Max Tavas Fashion/Running Sneaker", 
+    "price": "$40-$250", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "name": "Nike Women's Tanjun Running Sneaker", 
+    "price": "$57-$200", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "name": "Nike Flex Trainer 4 Women Round Toe Synthetic Gray Running Shoe", 
+    "price": "$44-$139", 
+    "rating": "4 out of 5 stars"
+},{
+    "name": "Nike Men's Free 5.0 Running Shoe", 
+    "price": "$59-$209", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "name": "Nike Men's Downshifter 6 Running Shoe", 
+    "price": "$46-$189", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Nike Mens Team Club Fleece Pullover Hooded Sweatshirt", 
+    "price": "$49", 
+    "rating": "4.3 out of 5 stars"
+},{
+    "name": "Reebok Men's Print Smooth Ultk Running Shoe", 
+    "price": "$84", 
+    "rating": "No ratings."
+},{
+    "name": "Reebok Men's Ros Workout Tr 2.0 Cross-trainer Shoe", 
+    "price": "$79", 
+    "rating": "4.3 out of 5 stars"
+} ] }

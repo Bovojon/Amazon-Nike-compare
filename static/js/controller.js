@@ -31,8 +31,14 @@
         .get("/static/js/amazon-output.json")
         .then(function(response) {
           vm.data = response.data;
-          console.log(vm.data);
+          vm.items = vm.data.items;
+          console.log(typeof response);
+          console.log(typeof vm.items);
+          console.log(vm.items);
         });
+
+      vm.results = JSON.stringify(vm.items);
+      console.log(typeof vm.results);
     }
 
 

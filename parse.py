@@ -61,7 +61,19 @@ def parse_data():
         if amazon_rating_string[i] == '':
             amazon_rating_string[i] = "No ratings."
 
+
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "static/js", "amazon-output.json")
-    with open(json_url, "w") as outfile:
-        json.dump({'names': descs, 'prices': amazon_price_string, 'ratings': amazon_rating_string}, outfile, indent=4)
+
+    f = open(json_url, "w+")
+    f.close()
+
+    with open(json_url, "a") as outfile:
+        outfile.write("{ \"items\": [ ")
+        for i in range(len(prices)):
+            json.dump({'name': descs[i], 'price': amazon_price_string[i], 'rating': amazon_rating_string[i] }, outfile, indent=4)
+            if i != (len(prices) -1):
+                outfile.write(",")
+        outfile.write(" ] }")
+
+    outfile.close()
