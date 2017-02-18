@@ -6,8 +6,8 @@
     .controller('CompareCtrl', CompareCtrl);
 
 
-  CompareCtrl.$inject = ['$state', '$http'];
-  function CompareCtrl($state, $http) {
+  CompareCtrl.$inject = ['$state', '$http', '$timeout'];
+  function CompareCtrl($state, $http, $timeout) {
     var vm = this;
     vm.submitForm = submitForm;
     vm.displayData = displayData;
@@ -20,6 +20,9 @@
         .then(function(response) {
           console.log(response);
           vm.results = response.data;
+        })
+        .then(function(response) {
+          $timeout(displayData,5000);
         });
     };
 
@@ -28,6 +31,7 @@
         .get("/static/js/amazon-output.json")
         .then(function(response) {
           vm.data = response.data;
+          console.log(vm.data);
         });
     }
 
