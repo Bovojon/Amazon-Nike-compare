@@ -9,9 +9,83 @@
       </div>
       </div>
 
-      <form id="compare-form" name="compareForm" ng-submit="vm.submitForm()" novalidate>
-          <div id="form-views" ui-view></div>
+      <form ng-submit="vm.submitForm(vm.keyword)" id="compare-form" novalidate>
+
+        <!-- Keyword -->
+        <div class="form-group">
+            <label>Enter a Nike product: </label>
+            <input ng-model="vm.keyword" type="text" class="form-control" required autofocus>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-flash"></span> Compare</button>
+        </div>
+
+        <button ng-click="vm.displayData()" type="button" name="button">Display Data</button>
+
       </form>
+
+      <div class="row">
+        <!-- Amazon -->
+        <div class="col-sm-5">
+          <div class="row">
+            <ul ng-if="vm.items">
+                <li ng-repeat="item in vm.items | limitTo:4 ">
+                  <div class="col-sm-12 col-width">
+                    <md-card>
+                        <md-card-title>
+                          <md-card-title-text>
+                            <span class="md-headline">{{ item.name }}</span>
+                          </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                          <p class="price">
+                            {{ item.price }}
+                          </p>
+                          <p class="rating">
+                            {{ item.rating }}
+                          </p>
+                        </md-card-content>
+
+                        <img ng-src="{{ item.image }}" class="md-card-image" style="padding:15px;" />
+                      </md-card>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </div>
+
+        <!-- Nike  -->
+        <div class="col-sm-5">
+          <div class="row">
+            <ul ng-if="vm.items">
+                <li ng-repeat="item in vm.items | limitTo:4 ">
+                  <div class="col-sm-12 col-width">
+                    <md-card>
+                        <md-card-title>
+                          <md-card-title-text>
+                            <span class="md-headline">{{ item.name }}</span>
+                          </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                          <p class="price">
+                            {{ item.price }}
+                          </p>
+                          <p class="rating">
+                            {{ item.rating }}
+                          </p>
+                        </md-card-content>
+
+                        <img ng-src="{{ item.image }}" class="md-card-image" style="padding:15px;" />
+                      </md-card>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </div>
+
+      </div>
+
 
     </div>
   </div>

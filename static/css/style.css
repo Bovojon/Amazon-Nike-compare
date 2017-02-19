@@ -7,6 +7,57 @@ h1 {
 	text-align: center;
 }
 
+.price {
+  color: red;
+  font-size: 16px;
+}
+
+.rating {
+  color: #ffbb28;
+  font-size: 18px;
+}
+
+.md-headline{
+  font-weight: 700 !important;
+  letter-spacing: -1px;
+  font-size: 20px;
+}
+ul {
+  padding-left: 0;
+}
+/*To remove the space inserted by li during ng-repeat:*/
+ul li {
+  display: block;
+}
+md-card-title {
+  padding: 14px 16px 6px !important;
+}
+img {
+  padding: 0px 0px 15px !important;
+}
+.col-width {
+  padding-right: 3px !important;
+  padding-left: 3px !important;
+}
+
+.fabSpeedDialdemoBasicUsage .text-capitalize {
+  text-transform: capitalize; }
+
+.fabSpeedDialdemoBasicUsage .md-fab:hover, .fabSpeedDialdemoBasicUsage .md-fab.md-focused {
+  background-color: #000 !important; }
+
+.fabSpeedDialdemoBasicUsage p.note {
+  font-size: 1.2rem; }
+
+.fabSpeedDialdemoBasicUsage .lock-size {
+  min-width: 300px;
+  min-height: 300px;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
+
 /* form styling */
 #form-container {
   /*background:#2f2f2f;*/

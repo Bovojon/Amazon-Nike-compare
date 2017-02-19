@@ -23,26 +23,26 @@
       controllerAs: 'vm'
       })
 
-      .state('home.keyword', {
-        url: 'keyword',
-        templateUrl: '/static/partials/form-keyword.html',
-        controller: 'CompareCtrl',
-        controllerAs: 'vm'
-      })
-
-      .state('home.category', {
-        url: 'compare',
-        templateUrl: '/static/partials/form-category.html',
-        controller: 'CompareCtrl',
-        controllerAs: 'vm'
-      })
-
-      .state('results', {
-        url: '/results',
-        templateUrl: '/static/partials/results.html',
-        controller: 'CompareCtrl',
-        controllerAs: 'vm'
-      })
+      // .state('home.keyword', {
+      //   url: 'keyword',
+      //   templateUrl: '/static/partials/form-keyword.html',
+      //   controller: 'CompareCtrl',
+      //   controllerAs: 'vm'
+      // })
+      //
+      // .state('home.category', {
+      //   url: 'compare',
+      //   templateUrl: '/static/partials/form-category.html',
+      //   controller: 'CompareCtrl',
+      //   controllerAs: 'vm'
+      // })
+      //
+      // .state('results', {
+      //   url: '/results',
+      //   templateUrl: '/static/partials/results.html',
+      //   controller: 'CompareCtrl',
+      //   controllerAs: 'vm'
+      // })
 
       .state('about', {
         url: '/about',

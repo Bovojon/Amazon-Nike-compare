@@ -6,6 +6,27 @@ import json
 import os
 from flask import Flask, send_file, make_response, request, render_template, url_for, json
 
+
+def image_url(filename, type = 'amazon'):
+
+	myfile = open(filename)
+	soup_object = bs4.BeautifulSoup(myfile.read(), 'lxml')
+
+	if type == 'amazon':
+		divtag = soup_object.findAll('div', \
+			attrs={'class':'a-column a-span12 a-text-center s-position-relative'})
+	elif type == 'nike':
+		divtag = soup_object.findAll('div', \
+			attrs={'class':'grid-item-image'})
+	else:
+		print " Please select either 'nike' or 'amazon' as the type. "
+
+	links = [divtag[i].findAll('img')[0]['src']\
+	 for i in range(len(divtag))]
+
+	return links
+
+
 def parse_data():
 
     soupAmazon = bs4.BeautifulSoup(open("amazon.html"), "lxml")
@@ -62,16 +83,19 @@ def parse_data():
             amazon_rating_string[i] = "No ratings."
 
 
+    list_images_amazon = image_url("amazon.html", type = 'amazon')
+
+
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "static/js", "amazon-output.json")
 
-    f = open(json_url, "w+")
-    f.close()
+    # f = open(json_url, "w+")
+    # f.close()
 
-    with open(json_url, "a") as outfile:
+    with open(json_url, "w") as outfile:
         outfile.write("{ \"items\": [ ")
         for i in range(len(prices)):
-            json.dump({'name': descs[i], 'price': amazon_price_string[i], 'rating': amazon_rating_string[i] }, outfile, indent=4)
+            json.dump({'name': descs[i], 'price': amazon_price_string[i], 'rating': amazon_rating_string[i], 'image': list_images_amazon[i] }, outfile, indent=4)
             if i != (len(prices) -1):
                 outfile.write(",")
         outfile.write(" ] }")

@@ -1,9 +1,9 @@
 <!-- NAME -->
-<div class="form-group" ng-class="{ 'has-error' : compareForm.keyword.$invalid && !compareForm.keyword.$pristine && submitted }">
-    <label for="name">Enter a Nike product: </label>
-    <input type="text" name="keyword" class="form-control" ng-model="vm.formData.keyword" required autofocus>
-    <p ng-show="compareForm.keyword.$invalid && !compareForm.keyword.$pristine && submitted" class="help-block">Please enter a nike product to continue.</p>
+<div class="form-group">
+    <label>Enter a Nike product: </label>
+    <input ng-model="vm.keyword" type="text" class="form-control" required autofocus>
 </div>
+
 
 <div class="form-group row">
   <div class="col-xs-6 col-xs-offset-3">

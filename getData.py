@@ -5,6 +5,8 @@ import webbrowser, requests, bs4
 
 def get_data(keyword):
     search = keyword
+    search = search.lower()
+    search = search.split(" ")
 
     # Search Amazon
     a = "+"

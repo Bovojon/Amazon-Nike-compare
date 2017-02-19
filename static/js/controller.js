@@ -13,10 +13,12 @@
     vm.displayData = displayData;
     vm.formData = {};
 
-    function submitForm() {
-      vm.keyword= vm.formData.keyword
+    console.log(vm.keyword);
+
+    function submitForm(keyword) {
+      console.log(keyword);
       $http
-        .post('/results', vm.keyword)
+        .post('/', vm.keyword)
         .then(function(response) {
           console.log(response);
           vm.results = response.data;
@@ -34,15 +36,8 @@
           vm.items = vm.data.items;
           console.log(typeof response);
           console.log(typeof vm.items);
-          console.log(vm.items);
         });
-
-      vm.results = JSON.stringify(vm.items);
-      console.log(typeof vm.results);
     }
-
-
-
 
 
   } // End of controller
