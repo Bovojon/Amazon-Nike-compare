@@ -8,16 +8,8 @@ def index():
         keyword = request.data
         present_prices(keyword)
         return send_file("static/js/amazon-output.json")
-        
+
     return send_file("templates/index.html")
-
-# @app.route('/compare',methods=['POST'])
-# def operation():
-#     if request.method == 'POST':
-#         keyword = request.data
-#         present_prices(keyword)
-#     return send_file("static/js/amazon-output.json")
-
 
 
 if __name__ == "__main__":

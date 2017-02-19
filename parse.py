@@ -8,7 +8,6 @@ from flask import Flask, send_file, make_response, request, render_template, url
 
 
 def image_url(filename, type = 'amazon'):
-
 	myfile = open(filename)
 	soup_object = bs4.BeautifulSoup(myfile.read(), 'lxml')
 
@@ -28,7 +27,6 @@ def image_url(filename, type = 'amazon'):
 
 
 def parse_data():
-
     soupAmazon = bs4.BeautifulSoup(open("amazon.html"), "lxml")
     rows = soupAmazon.select('div.s-item-container')
 
@@ -85,12 +83,11 @@ def parse_data():
 
     list_images_amazon = image_url("amazon.html", type = 'amazon')
 
+	list_images_nike = image_url("nike.html", type = 'nike')
+
 
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "static/js", "amazon-output.json")
-
-    # f = open(json_url, "w+")
-    # f.close()
 
     with open(json_url, "w") as outfile:
         outfile.write("{ \"items\": [ ")

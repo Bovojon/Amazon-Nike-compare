@@ -3,32 +3,26 @@
     <div id="form-container">
     <div class="page-header text-center">
       <h2>Compare Nike products on amazon.com and nike.com</h2>
-      <div id="status-buttons" class="text-center">
-        <a ui-sref-active="active" ui-sref=".keyword"><span>1</span> Enter Keyword</a>
-        <a ui-sref-active="active" ui-sref=".category"><span>2</span> Compare Results</a>
-      </div>
       </div>
 
-      <form ng-submit="vm.submitForm(vm.keyword)" id="compare-form" novalidate>
+      <div class="col-sm-8 col-sm-offset-2 form">
+        <form ng-submit="vm.submitForm(vm.keyword)" novalidate>
+          <div class="input-group">
+            <input ng-model="vm.keyword" type="text" class="form-control" required autofocus placeholder="Enter a Nike product ">
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-danger">
+                  <span class="glyphicon glyphicon-flash"></span> Compare</button>
+            </div>
+          </div>
+        </form>
+      </div>
 
-        <!-- Keyword -->
-        <div class="form-group">
-            <label>Enter a Nike product: </label>
-            <input ng-model="vm.keyword" type="text" class="form-control" required autofocus>
-        </div>
-
-        <div class="text-center">
-            <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-flash"></span> Compare</button>
-        </div>
-
-        <button ng-click="vm.displayData()" type="button" name="button">Display Data</button>
-
-      </form>
 
       <div class="row">
         <!-- Amazon -->
         <div class="col-sm-5">
           <div class="row">
+            <h2>Amazon.com</h2>
             <ul ng-if="vm.items">
                 <li ng-repeat="item in vm.items | limitTo:4 ">
                   <div class="col-sm-12 col-width">
@@ -46,8 +40,9 @@
                             {{ item.rating }}
                           </p>
                         </md-card-content>
-
-                        <img ng-src="{{ item.image }}" class="md-card-image" style="padding:15px;" />
+                        <div class="image">
+                          <img ng-src="{{ item.image }}" class="md-card-image" />
+                        </div>
                       </md-card>
                   </div>
                 </li>
@@ -58,6 +53,7 @@
         <!-- Nike  -->
         <div class="col-sm-5">
           <div class="row">
+            <h2>Nike.com</h2>
             <ul ng-if="vm.items">
                 <li ng-repeat="item in vm.items | limitTo:4 ">
                   <div class="col-sm-12 col-width">

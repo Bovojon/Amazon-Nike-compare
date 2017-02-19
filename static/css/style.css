@@ -7,6 +7,23 @@ h1 {
 	text-align: center;
 }
 
+.form{
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 80%;
+  height: 80%;
+}
+
+.keyword {
+  width: 50% !important;
+}
+
+.page-header {
+  border-bottom: 0px solid #eee !important;
+}
+
 .price {
   color: red;
   font-size: 16px;
@@ -56,24 +73,6 @@ img {
   height: 300px;
   margin-left: auto;
   margin-right: auto; }
-
-
-/* form styling */
-#form-container {
-  /*background:#2f2f2f;*/
-  margin-bottom:20px;
-  border-radius:5px;
-}
-#form-container .page-header {
-  /*background:#151515;*/
-  margin:0;
-  padding:30px;
-  border-top-left-radius:5px;
-  border-top-right-radius:5px;
-}
-#form-views {
-  padding: 40px;
-}
 
 /* numbered buttons */
 #status-buttons                 {  }
