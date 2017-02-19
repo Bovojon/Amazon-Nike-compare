@@ -1,0 +1,13 @@
+{ "averages": [ {
+    "average_high": 48, 
+    "average_indv": 20, 
+    "average_low": 18
+},{
+    "average_mens_high": 60, 
+    "average_mens_indv": 20, 
+    "average_mens_low": 17
+},{
+    "average_womens_high": 56, 
+    "average_womens_indv": 29, 
+    "average_womens_low": 25
+} ] }

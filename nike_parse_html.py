@@ -3,8 +3,21 @@
 
 import requests, sys, webbrowser, bs4
 import json
-#import os
-#from flask import Flask, send_file, make_response, request, render_template, url_for, json
+import os
+from flask import Flask, send_file, make_response, request, render_template, url_for, json
+
+def image_url(filename):
+	myfile = open(filename)
+	soup_object = bs4.BeautifulSoup(myfile.read(), 'lxml')
+
+	divtag = soup_object.findAll('div', \
+		attrs={'class':'grid-item-image'})
+
+	links = [divtag[i].findAll('img')[0]['src']\
+	 for i in range(len(divtag))]
+
+	return links
+
 
 def parse_nike_data():
 
@@ -39,9 +52,6 @@ def parse_nike_data():
     for k in nameElemsNike:
         nike_name_class.append(str(k))
 
-    #print("\nNike.com: \n")
-
-
     for n in nike_name_class:
         nike_name.append(n.partition(char1)[-1].rpartition(char2)[0])
 
@@ -50,13 +60,6 @@ def parse_nike_data():
 
     for p in nike_price_class:
         nike_price.append(p.partition(char1)[-1].rpartition(char2)[0])
-
-    #fmt = '{:<50}{:<60}{}'
-
-    #print(fmt.format('Name', 'Gender', 'Price'))
-    #for i, (names, genders, prices) in enumerate(zip(nike_name, nike_gender, nike_price)):
-    #    print(fmt.format(names, genders, prices))
-
 
     for i in nike_price:
         price_total = i.split("$")[1]
@@ -67,20 +70,11 @@ def parse_nike_data():
             mens_index.append(i)
         elif "Women's" in nike_gender[i]:
             womens_index.append(i)
-    '''
-    print nike_price_float
-    print ("\n")
-    print mens_index
-    print womens_index
-    '''
+
     for i in mens_index:
         nike_price_mens.append(nike_price_float[i])
     for i in womens_index:
         nike_price_womens.append(nike_price_float[i])
-
-    #print nike_price_mens
-    #print nike_price_womens
-
 
     average_total = round((sum(nike_price_float) / len(nike_price_float)),2)
 
@@ -94,25 +88,27 @@ def parse_nike_data():
     else:
         average_womens = str("No prices for women's products.")
 
-    '''
-    print ("\n")
-    print average_total
-    print average_mens
-    print average_womens
-    '''
 
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "static/js", "nike-output.json")
 
-    #SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    #json_url = os.path.join(SITE_ROOT, "static/js", "amazon-output.json")
+    average_url = os.path.join(SITE_ROOT, "static/js", "nike-average.json")
 
+    list_images_nike = image_url("nike.html")
 
-    #with open(json_url, "a") as outfile:
-    with open("nike-output.json", "w") as outfile:
+    with open(average_url, "w") as averageFile:
+        averageFile.write("{ \"averages\": [ ")
+        json.dump({'average_total': average_total, 'average_mens': average_mens, 'average_womens': average_womens}, averageFile, indent=4)
+        averageFile.write(" ] }")
+
+    averageFile.close()
+
+    with open(json_url, "w") as outfile:
         outfile.write("{ \"items\": [ ")
-        json.dump({'average_total': average_total, 'average_mens': average_mens, 'average_womens': average_womens}, outfile, indent=4)
-        outfile.write(",")
+        #json.dump({'average_total': average_total, 'average_mens': average_mens, 'average_womens': average_womens}, outfile, indent=4)
+        #outfile.write(",")
         for i in range(len(nike_price)):
-            json.dump({'name': nike_name[i], 'gender': nike_gender[i], 'price': nike_price[i]}, outfile, indent=4)
+            json.dump({'name': nike_name[i], 'gender': nike_gender[i], 'price': nike_price[i], 'image': list_images_nike[i] }, outfile, indent=4)
             if i != (len(nike_price) -1):
                 outfile.write(",")
         outfile.write(" ] }")

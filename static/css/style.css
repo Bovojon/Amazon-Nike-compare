@@ -3,6 +3,10 @@ body {
   min-height: 100%;
 }
 
+.nike {
+  margin-left: 50px;
+}
+
 h1 {
 	text-align: center;
 }

@@ -24,7 +24,7 @@
           <div class="row">
             <h2>Amazon.com</h2>
             <ul ng-if="vm.items">
-                <li ng-repeat="item in vm.items | limitTo:4 ">
+                <li ng-repeat="item in vm.items ">
                   <div class="col-sm-12 col-width">
                     <md-card>
                         <md-card-title>
@@ -51,11 +51,11 @@
         </div>
 
         <!-- Nike  -->
-        <div class="col-sm-5">
+        <div class="col-sm-5 nike">
           <div class="row">
             <h2>Nike.com</h2>
-            <ul ng-if="vm.items">
-                <li ng-repeat="item in vm.items | limitTo:4 ">
+            <ul ng-if="vm.itemsn">
+                <li ng-repeat="item in vm.itemsn ">
                   <div class="col-sm-12 col-width">
                     <md-card>
                         <md-card-title>

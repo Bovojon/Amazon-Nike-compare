@@ -37,6 +37,18 @@
           console.log(typeof response);
           console.log(typeof vm.items);
         });
+
+
+      $http
+        .get("/static/js/nike-output.json")
+        .then(function(response) {
+          vm.datan = response.data;
+          vm.itemsn = vm.datan.items;
+          console.log(typeof response);
+          console.log(typeof vm.itemsn);
+        });
+
+
     }
 
 
