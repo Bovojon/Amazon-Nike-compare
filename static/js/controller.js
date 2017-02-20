@@ -10,7 +10,6 @@
   function CompareCtrl($state, $http, $timeout) {
     var vm = this;
     vm.submitForm = submitForm;
-    vm.formData = {};
 
     vm.website = false;
     vm.activated = false;
@@ -48,6 +47,8 @@
               console.log(typeof vm.itemsn);
             });
         });
+
+        vm.keyword = "";
     };
 
   } // End of controller

@@ -20,6 +20,22 @@
           <md-progress-circular class="loader" ng-show="vm.activated "></md-progress-circular>
         </div>
 
+        <!-- Search form -->
+        <div ng-show="vm.website" style="margin-top:50px;">
+          <h4>
+            Search by description, or if searching by price, place $ in front.
+          </h4>
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                <input ng-model="vm.searchBy" type="text" class="form-control" placeholder="Search results...">
+              </div>
+            </div>
+          </form>
+        </div>
+
+
       </div>
 
 
@@ -30,7 +46,7 @@
           <div class="row">
             <h2 ng-show="vm.website">Amazon.com</h2>
             <ul ng-if="vm.items">
-                <li ng-repeat="item in vm.items ">
+                <li ng-repeat="item in vm.items | filter:vm.searchBy ">
                   <div class="col-sm-12 col-width">
                     <md-card>
                         <md-card-title>
@@ -61,7 +77,7 @@
           <div class="row">
             <h2 ng-show="vm.website">Nike.com</h2>
             <ul ng-if="vm.itemsn">
-                <li ng-repeat="item in vm.itemsn ">
+                <li ng-repeat="item in vm.itemsn | filter:vm.searchBy ">
                   <div class="col-sm-12 col-width">
                     <md-card>
                         <md-card-title>
