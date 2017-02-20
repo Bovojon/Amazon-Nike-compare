@@ -19,6 +19,7 @@ def image_url(filename):
 	return links
 
 
+
 def parse_nike_data():
 
     char1 = '>'
@@ -98,6 +99,10 @@ def parse_nike_data():
 
     with open(average_url, "w") as averageFile:
         json.dump({'average_total': average_total, 'average_mens': average_mens, 'average_womens': average_womens}, averageFile, indent=4)
+	bar_url = os.path.join(SITE_ROOT, "static/js", "nike-bar.json")
+	with open(bar_url, "w") as barFile:
+	    json.dump([ {"Category": "average_total", "Price":average_total}, {"Category": "average_mens", "Price":average_mens}, {"Category": "average_womens", "Price":average_womens}], barFile, indent=4)
+	barFile.close()
     averageFile.close()
 
     with open(json_url, "w") as outfile:

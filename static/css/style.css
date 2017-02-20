@@ -1,6 +1,6 @@
 body {
   padding:20px;
-  height: 100%;
+  min-height: 100%;
 }
 
 h1 {
@@ -67,3 +67,23 @@ img {
   padding-right: 3px !important;
   padding-left: 3px !important;
 }
+
+/*D3 bar*/
+.bar{
+    fill: steelblue;
+  }
+
+  .bar:hover{
+    fill: brown;
+  }
+
+	.axis {
+	  font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}

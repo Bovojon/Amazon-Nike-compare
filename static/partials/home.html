@@ -17,12 +17,15 @@
         </form>
 
         <div style="margin:30px;">
-          <md-progress-circular class="loader" ng-show="vm.activated "></md-progress-circular>
+          <md-progress-circular class="loader" ng-show="vm.activated"></md-progress-circular>
         </div>
 
-        <!-- Search form -->
-        <div ng-show="vm.website" style="margin-top:50px;">
+        <div class="alert alert-danger" ng-show="vm.error">
+          <strong>Oops</strong> There was an error in scrapping data. Please try another keyword.
+        </div>
 
+        <!-- Stats and search form -->
+        <div ng-show="vm.website" style="margin-top:50px;">
           <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Statistics
           </a>
@@ -32,17 +35,24 @@
               <div class="row">
                 <div class="col-sm-6">
                   <h4>Amazon - Averages</h4>
-                  <h5>All:  <span class="average-price">${{ vm.averagesA.average_low }} - {{ vm.averagesA.average_high }}.</span> </h5>
-                  <h5>Men's:  <span class="average-price">${{ vm.averagesA.average_mens_low }} - {{ vm.averagesA.average_mens_high }}.</span>  </h5>
-                  <h5>Women's:  <span class="average-price">${{ vm.averagesA.average_womens_low }} - {{ vm.averagesA.average_womens_high }}. </span> </h5>
+                  <h5>All:  <span class="average-price">${{ vm.averagesA.average_low }} - {{ vm.averagesA.average_high }}</span> </h5>
+                  <h5>Men's:  <span class="average-price">${{ vm.averagesA.average_mens_low }} - {{ vm.averagesA.average_mens_high }}</span>  </h5>
+                  <h5>Women's:  <span class="average-price">${{ vm.averagesA.average_womens_low }} - {{ vm.averagesA.average_womens_high }} </span> </h5>
                 </div>
                 <div class="col-sm-5">
                   <h4>Nike - Averages</h4>
-                  <h5>All: <span class="average-price">${{ vm.averagesN.average_total }}.</span> </h5>
-                  <h5>Men's: <span class="average-price">${{ vm.averagesN.average_mens }}.</span>  </h5>
-                  <h5>Women's: <span class="average-price">${{ vm.averagesN.average_womens }}.</span>  </h5>
+                  <h5>All: <span class="average-price">${{ vm.averagesN.average_total }}</span> </h5>
+                  <h5>Men's: <span class="average-price">${{ vm.averagesN.average_mens }}</span>  </h5>
+                  <h5>Women's: <span class="average-price">${{ vm.averagesN.average_womens }}</span>  </h5>
                 </div>
               </div>
+
+              <!-- Bar chart -->
+              <div class="row" style="padding:10px; margin:10px; display:block;">
+                <h3>Bar chart for Nike average prices</h3>
+                <div id="barDiv"></div>
+              </div>
+
             </div>
           </div>
 
