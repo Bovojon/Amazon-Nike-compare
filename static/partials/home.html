@@ -29,7 +29,6 @@
           <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Statistics
           </a>
-
           <div class="collapse" id="collapseExample">
             <div class="well">
               <div class="row">
@@ -46,28 +45,29 @@
                   <h5>Women's: <span class="average-price">${{ vm.averagesN.average_womens }}</span>  </h5>
                 </div>
               </div>
-
               <!-- Bar chart -->
               <div class="row" style="padding:10px; margin:10px; display:block;">
                 <h3>Bar chart for Nike average prices</h3>
                 <div id="barDiv"></div>
               </div>
-
             </div>
           </div>
 
-
-          <h4 style="margin-top:50px;">
-            Search by description, or if searching by price, place $ in front.
-          </h4>
-          <form>
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-search"></i></div>
-                <input ng-model="vm.searchBy" type="text" class="form-control" placeholder="Search results...">
+          <div class="panel">
+            <h4 style="margin-top:50px;">
+              Search by description, or if searching by price, place $ in front.
+            </h4>
+            <form>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                  <input ng-model="vm.searchBy" type="text" class="form-control" placeholder="Search results...">
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
+
+
         </div>
 
 

@@ -6,8 +6,8 @@
     .controller('CompareCtrl', CompareCtrl);
 
 
-  CompareCtrl.$inject = ['$state', '$http', '$timeout'];
-  function CompareCtrl($state, $http, $timeout) {
+  CompareCtrl.$inject = ['$state', '$http', '$timeout', '$mdToast'];
+  function CompareCtrl($state, $http, $timeout, $mdToast) {
     var vm = this;
     vm.submitForm = submitForm;
 
@@ -74,6 +74,9 @@
         }); //End of post request
 
         vm.keyword = "";
+        if(vm.website){
+          showToast();
+        }
     };
 
     // To clear the bar for re-searching
@@ -88,25 +91,17 @@
       var margin = {top: 20, right: 20, bottom: 70, left: 40},
           width = 400 - margin.left - margin.right,
           height = 450 - margin.top - margin.bottom;
-
-
       // set the ranges
       var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
-
       var y = d3.scale.linear().range([height, 0]);
-
       // define the axis
       var xAxis = d3.svg.axis()
           .scale(x)
           .orient("bottom")
-
-
       var yAxis = d3.svg.axis()
           .scale(y)
           .orient("left")
           .ticks(10);
-
-
       // add the SVG element
       var svg = d3.select("#barDiv").append("svg")
           .attr("width", width + margin.left + margin.right)
@@ -114,22 +109,16 @@
         .append("g")
           .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");
-
-
       // load the data
       d3.json("/static/js/nike-bar.json", function(error, data) {
-
         console.log(data);
-
         data.forEach(function(d) {
             d.Category = d.Category;
             d.Price = +d.Price;
         });
-
         // scale the range of the data
         x.domain(data.map(function(d) { return d.Category; }));
         y.domain([0, d3.max(data, function(d) { return d.Price; })]);
-
         // add axis
         svg.append("g")
             .attr("class", "x axis")
@@ -140,7 +129,6 @@
             .attr("dx", "-.8em")
             .attr("dy", "-.55em")
             .attr("transform", "rotate(-90)" );
-
         svg.append("g")
             .attr("class", "y axis")
             .call(yAxis)
@@ -150,8 +138,6 @@
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text("Price");
-
-
         // Add bar chart
         svg.selectAll("bar")
             .data(data)
@@ -161,9 +147,46 @@
             .attr("width", x.rangeBand())
             .attr("y", function(d) { return y(d.Price); })
             .attr("height", function(d) { return height - y(d.Price); });
-
       });
+    } // End of drawBar()
+
+
+    function showToast(){
+      console.log("showToast!!!!")
+      var last = {
+          bottom: false,
+          top: true,
+          left: false,
+          right: true
+        };
+      vm.toastPosition = angular.extend({},last);
+      vm.getToastPosition = function() {
+        sanitizePosition();
+        return Object.keys(vm.toastPosition)
+          .filter(function(pos) { return vm.toastPosition[pos]; })
+          .join(' ');
+      };
+      function sanitizePosition() {
+        var current = vm.toastPosition;
+        if ( current.bottom && last.top ) current.top = false;
+        if ( current.top && last.bottom ) current.bottom = false;
+        if ( current.right && last.left ) current.left = false;
+        if ( current.left && last.right ) current.right = false;
+        last = angular.extend({},current);
+      }
+      vm.showSimpleToast = function() {
+        var pinTo = vm.getToastPosition();
+        $mdToast.show(
+          $mdToast.simple()
+            .textContent('Keep seeing the same results? Open the developer tools (Ctrl+Shift+i) and reload.')
+            .position(pinTo )
+            .hideDelay(10000)
+        );
+      };
+      vm.showSimpleToast();
     }
+
+
 
   } // End of controller
 })();
