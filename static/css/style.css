@@ -1,10 +1,6 @@
 body {
   padding:20px;
-  min-height: 100%;
-}
-
-.nike {
-  margin-left: 50px;
+  height: 100%;
 }
 
 h1 {
@@ -13,6 +9,12 @@ h1 {
 
 .form{
   margin-bottom: 20px;
+}
+
+.loader {
+  margin: auto;
+  padding: 50px;
+  display: block;
 }
 
 .image {

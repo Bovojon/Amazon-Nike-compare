@@ -5,7 +5,7 @@
     // Angular modules
     'ui.router',
     'ngAnimate',
-
+    'ngMaterial',
   ])
   .config(configFunction)
 

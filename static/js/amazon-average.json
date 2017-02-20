@@ -1,13 +1,13 @@
 { "averages": [ {
-    "average_high": 48, 
-    "average_indv": 20, 
-    "average_low": 18
+    "average_high": 111, 
+    "average_indv": 66, 
+    "average_low": 47
 },{
-    "average_mens_high": 60, 
-    "average_mens_indv": 20, 
-    "average_mens_low": 17
+    "average_mens_high": 154, 
+    "average_mens_indv": "No individual prices for men's products.", 
+    "average_mens_low": 49
 },{
-    "average_womens_high": 56, 
-    "average_womens_indv": 29, 
-    "average_womens_low": 25
+    "average_womens_high": 122, 
+    "average_womens_indv": 60, 
+    "average_womens_low": 44
 } ] }

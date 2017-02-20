@@ -10,12 +10,15 @@
   function CompareCtrl($state, $http, $timeout) {
     var vm = this;
     vm.submitForm = submitForm;
-    vm.displayData = displayData;
     vm.formData = {};
+
+    vm.website = false;
+    vm.activated = false;
 
     console.log(vm.keyword);
 
     function submitForm(keyword) {
+      vm.activated = true;
       console.log(keyword);
       $http
         .post('/', vm.keyword)
@@ -24,33 +27,28 @@
           vm.results = response.data;
         })
         .then(function(response) {
-          $timeout(displayData(),5000);
+          $http
+            .get("/static/js/amazon-output.json")
+            .then(function(response) {
+              vm.data = response.data;
+              vm.items = vm.data.items;
+              console.log(typeof response);
+              console.log(typeof vm.items);
+              vm.activated = false;
+              vm.website = true;
+            });
+
+
+          $http
+            .get("/static/js/nike-output.json")
+            .then(function(response) {
+              vm.datan = response.data;
+              vm.itemsn = vm.datan.items;
+              console.log(typeof response);
+              console.log(typeof vm.itemsn);
+            });
         });
     };
-
-    function displayData() {
-      $http
-        .get("/static/js/amazon-output.json")
-        .then(function(response) {
-          vm.data = response.data;
-          vm.items = vm.data.items;
-          console.log(typeof response);
-          console.log(typeof vm.items);
-        });
-
-
-      $http
-        .get("/static/js/nike-output.json")
-        .then(function(response) {
-          vm.datan = response.data;
-          vm.itemsn = vm.datan.items;
-          console.log(typeof response);
-          console.log(typeof vm.itemsn);
-        });
-
-
-    }
-
 
   } // End of controller
 })();

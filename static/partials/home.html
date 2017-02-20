@@ -15,14 +15,20 @@
             </div>
           </div>
         </form>
+
+        <div style="margin:30px;">
+          <md-progress-circular class="loader" ng-show="vm.activated "></md-progress-circular>
+        </div>
+
       </div>
 
 
       <div class="row">
+
         <!-- Amazon -->
         <div class="col-sm-5">
           <div class="row">
-            <h2>Amazon.com</h2>
+            <h2 ng-show="vm.website">Amazon.com</h2>
             <ul ng-if="vm.items">
                 <li ng-repeat="item in vm.items ">
                   <div class="col-sm-12 col-width">
@@ -53,7 +59,7 @@
         <!-- Nike  -->
         <div class="col-sm-5 nike">
           <div class="row">
-            <h2>Nike.com</h2>
+            <h2 ng-show="vm.website">Nike.com</h2>
             <ul ng-if="vm.itemsn">
                 <li ng-repeat="item in vm.itemsn ">
                   <div class="col-sm-12 col-width">
