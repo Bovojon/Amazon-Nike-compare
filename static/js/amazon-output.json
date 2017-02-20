@@ -119,11 +119,6 @@
     "price": "$129-$129", 
     "rating": "No ratings."
 },{
-    "image": "https://images-na.ssl-images-amazon.com/images/I/41NRPkwirdL._AC_US200_.jpg", 
-    "name": "Nike Women's Air Max Thea Shoe", 
-    "price": "$29-$249", 
-    "rating": "4 out of 5 stars"
-},{
     "image": "https://images-na.ssl-images-amazon.com/images/I/51fmYP+V4JL._AC_US200_.jpg", 
     "name": "Nike Roshe One Premium", 
     "price": "$45-$69", 
@@ -134,15 +129,15 @@
     "price": "$55-$156", 
     "rating": "2.9 out of 5 stars"
 },{
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41NRPkwirdL._AC_US200_.jpg", 
+    "name": "Nike Women's Air Max Thea Shoe", 
+    "price": "$29-$249", 
+    "rating": "4 out of 5 stars"
+},{
     "image": "https://images-na.ssl-images-amazon.com/images/I/41PHRQbp2oL._AC_US200_.jpg", 
     "name": "Nike Roshe One Men's Shoes White 511881-112", 
     "price": "$100-$149", 
     "rating": "5 out of 5 stars"
-},{
-    "image": "https://images-na.ssl-images-amazon.com/images/I/41QV+P+H7LL._AC_US200_.jpg", 
-    "name": "Nike Women's Tanjun Running Sneaker", 
-    "price": "$57-$200", 
-    "rating": "4.5 out of 5 stars"
 },{
     "image": "https://images-na.ssl-images-amazon.com/images/I/31aYS8ayTEL._AC_US200_.jpg", 
     "name": "Nike (Td) Baby Rosherun Running Shoes", 
@@ -150,6 +145,21 @@
     "rating": "3.6 out of 5 stars"
 },{
     "image": "https://images-na.ssl-images-amazon.com/images/I/41DAyfjzHwL._AC_US200_.jpg", 
+    "name": "Nike Women's Tanjun Running Sneaker", 
+    "price": "$57-$200", 
+    "rating": "4.5 out of 5 stars"
+},{
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41QV+P+H7LL._AC_US200_.jpg", 
+    "name": "Nike Roshe One Print Women's Sneaker", 
+    "price": "$109", 
+    "rating": "No ratings."
+},{
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41ciww6VVaL._AC_US200_.jpg", 
+    "name": "Dan Smatree Blue Beige Pink Floral 2.75\" Cotton Jacquard Woven Men Tie Necktie", 
+    "price": "$18", 
+    "rating": "No ratings."
+},{
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51qXBGmg69L._AC_US200_.jpg", 
     "name": "Nike Stefan Janoski Max Mens Sneakers", 
     "price": "$39-$369", 
     "rating": "4.5 out of 5 stars"
@@ -165,11 +175,11 @@
     "rating": "4.5 out of 5 stars"
 },{
     "image": "https://images-na.ssl-images-amazon.com/images/I/41+boHhEnyL._AC_US200_.jpg", 
-    "name": "Nike Roshe One Print Women's Sneaker", 
-    "price": "$109", 
+    "name": "Nike Mens Roshe One Mesh Trainers", 
+    "price": "$106", 
     "rating": "No ratings."
 },{
-    "image": "https://images-na.ssl-images-amazon.com/images/I/41ciww6VVaL._AC_US200_.jpg", 
+    "image": "https://images-na.ssl-images-amazon.com/images/I/31BngdgrDhL._AC_US200_.jpg", 
     "name": "Nike Mens Roshe One Winter Running Shoes", 
     "price": "$74-$109", 
     "rating": "5 out of 5 stars"
@@ -185,21 +195,16 @@
     "rating": "5 out of 5 stars"
 },{
     "image": "https://images-na.ssl-images-amazon.com/images/I/31SPQgmHQUL._AC_US200_.jpg", 
-    "name": "Nike Mens Roshe One Mesh Trainers", 
-    "price": "$106", 
-    "rating": "No ratings."
+    "name": "Nike Women's Juvenate Running Shoe", 
+    "price": "$71-$169", 
+    "rating": "4.4 out of 5 stars"
 },{
-    "image": "https://images-na.ssl-images-amazon.com/images/I/31BngdgrDhL._AC_US200_.jpg", 
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41l4L59nyfL._AC_US200_.jpg", 
     "name": "Nike Women's Roshe One Running Shoe", 
     "price": "$69-$106", 
     "rating": "No ratings."
 },{
     "image": "https://images-na.ssl-images-amazon.com/images/I/51EClPOJ2bL._AC_US200_.jpg", 
-    "name": "Dan Smatree Blue Beige Pink Floral 2.75\" Cotton Jacquard Woven Men Tie Necktie", 
-    "price": "$18", 
-    "rating": "No ratings."
-},{
-    "image": "https://images-na.ssl-images-amazon.com/images/I/51qXBGmg69L._AC_US200_.jpg", 
     "name": "Nike Roshe One Flight Weight Style : 705485-602 Big Kids Red", 
     "price": "$62-$84", 
     "rating": "5 out of 5 stars"
@@ -210,11 +215,6 @@
     "rating": "4.6 out of 5 stars"
 },{
     "image": "https://images-na.ssl-images-amazon.com/images/I/412-NrVpAEL._AC_US200_.jpg", 
-    "name": "Nike Women's Juvenate Running Shoe", 
-    "price": "$71-$169", 
-    "rating": "4.4 out of 5 stars"
-},{
-    "image": "https://images-na.ssl-images-amazon.com/images/I/41l4L59nyfL._AC_US200_.jpg", 
     "name": "Nike Roshe One Flight Weight (GS) 705485 003 Size 6.5Y", 
     "price": "$70", 
     "rating": "No ratings."

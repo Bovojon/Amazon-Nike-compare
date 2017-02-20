@@ -97,10 +97,7 @@ def parse_nike_data():
     list_images_nike = image_url("nike.html")
 
     with open(average_url, "w") as averageFile:
-        averageFile.write("{ \"averages\": [ ")
         json.dump({'average_total': average_total, 'average_mens': average_mens, 'average_womens': average_womens}, averageFile, indent=4)
-        averageFile.write(" ] }")
-
     averageFile.close()
 
     with open(json_url, "w") as outfile:

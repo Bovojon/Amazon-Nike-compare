@@ -11,6 +11,11 @@ h1 {
   margin-bottom: 20px;
 }
 
+.average-price {
+  color: #13af90;
+  font-weight: 700;
+}
+
 .loader {
   margin: auto;
   padding: 50px;

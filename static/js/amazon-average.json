@@ -1,13 +1,11 @@
-{ "averages": [ {
+{
     "average_high": 178, 
     "average_indv": 75, 
-    "average_low": 59
-},{
+    "average_low": 59, 
     "average_mens_high": 175, 
     "average_mens_indv": 83, 
-    "average_mens_low": 65
-},{
+    "average_mens_low": 65, 
     "average_womens_high": 224, 
     "average_womens_indv": 99, 
     "average_womens_low": 63
-} ] }
+}

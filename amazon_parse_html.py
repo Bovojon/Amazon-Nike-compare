@@ -174,14 +174,7 @@ def parse_amazon_data():
     average_url = os.path.join(SITE_ROOT, "static/js", "amazon-average.json")
 
     with open(average_url, "w") as averageFile:
-        averageFile.write("{ \"averages\": [ ")
-        json.dump({'average_low': average_low, 'average_high': average_high, 'average_indv': average_indv}, averageFile, indent=4)
-        averageFile.write(",")
-        json.dump({'average_mens_low': average_mens_low, 'average_mens_high': average_mens_high, 'average_mens_indv': average_mens_indv}, averageFile, indent=4)
-        averageFile.write(",")
-        json.dump({'average_womens_low': average_womens_low, 'average_womens_high': average_womens_high, 'average_womens_indv': average_womens_indv}, averageFile, indent=4)
-        averageFile.write(" ] }")
-
+        json.dump({ 'average_womens_indv': average_womens_indv, 'average_womens_high': average_womens_high, 'average_womens_low': average_womens_low, 'average_mens_indv': average_mens_indv, 'average_mens_high': average_mens_high, 'average_mens_low': average_mens_low, 'average_low': average_low, 'average_high': average_high, 'average_indv': average_indv}, averageFile, indent=4)
     averageFile.close()
 
 

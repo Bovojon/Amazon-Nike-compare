@@ -26,6 +26,7 @@
           vm.results = response.data;
         })
         .then(function(response) {
+
           $http
             .get("/static/js/amazon-output.json")
             .then(function(response) {
@@ -46,7 +47,21 @@
               console.log(typeof response);
               console.log(typeof vm.itemsn);
             });
-        });
+
+          $http
+            .get("/static/js/amazon-average.json")
+            .then(function(response) {
+              vm.averagesA = response.data;
+              console.log(response);
+            });
+
+          $http
+            .get("/static/js/nike-average.json")
+            .then(function(response) {
+              vm.averagesN = response.data;
+            });
+
+        }); //End of post request
 
         vm.keyword = "";
     };

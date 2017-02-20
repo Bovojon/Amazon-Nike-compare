@@ -22,7 +22,32 @@
 
         <!-- Search form -->
         <div ng-show="vm.website" style="margin-top:50px;">
-          <h4>
+
+          <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Statistics
+          </a>
+
+          <div class="collapse" id="collapseExample">
+            <div class="well">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4>Amazon - Averages</h4>
+                  <h5>All:  <span class="average-price">${{ vm.averagesA.average_low }} - {{ vm.averagesA.average_high }}.</span> </h5>
+                  <h5>Men's:  <span class="average-price">${{ vm.averagesA.average_mens_low }} - {{ vm.averagesA.average_mens_high }}.</span>  </h5>
+                  <h5>Women's:  <span class="average-price">${{ vm.averagesA.average_womens_low }} - {{ vm.averagesA.average_womens_high }}. </span> </h5>
+                </div>
+                <div class="col-sm-5">
+                  <h4>Nike - Averages</h4>
+                  <h5>All: <span class="average-price">${{ vm.averagesN.average_total }}.</span> </h5>
+                  <h5>Men's: <span class="average-price">${{ vm.averagesN.average_mens }}.</span>  </h5>
+                  <h5>Women's: <span class="average-price">${{ vm.averagesN.average_womens }}.</span>  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <h4 style="margin-top:50px;">
             Search by description, or if searching by price, place $ in front.
           </h4>
           <form>
