@@ -154,8 +154,8 @@
     function showToast(){
       console.log("showToast!!!!")
       var last = {
-          bottom: false,
-          top: true,
+          bottom: true,
+          top: false,
           left: false,
           right: true
         };
@@ -180,7 +180,7 @@
           $mdToast.simple()
             .textContent('Keep seeing the same results? Open the developer tools (Ctrl+Shift+i) and reload.')
             .position(pinTo )
-            .hideDelay(10000)
+            .hideDelay(2000)
         );
       };
       vm.showSimpleToast();

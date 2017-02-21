@@ -1,16 +1,14 @@
 <div class="row">
   <div class="col-sm-10 col-sm-offset-1">
     <div id="form-container">
-    <div class="page-header text-center">
-      <h2>Compare Nike products on amazon.com and nike.com</h2>
-      </div>
+    <!-- <div class="page-header text-center"><h2></h2></div> -->
 
       <div class="col-sm-8 col-sm-offset-2 form">
         <form ng-submit="vm.submitForm(vm.keyword)" novalidate>
           <div class="input-group">
-            <input ng-model="vm.keyword" type="text" class="form-control" required autofocus placeholder="Enter a Nike product ">
+            <input ng-model="vm.keyword" type="text" class="form-control" required autofocus placeholder="Search for Nike products (e.g. pants, roshe one, hats, mercurial)">
             <div class="input-group-btn">
-                <button type="submit" class="btn btn-danger">
+                <button type="submit" class="btn btn-success">
                   <span class="glyphicon glyphicon-flash"></span> Compare</button>
             </div>
           </div>
@@ -26,7 +24,9 @@
 
         <!-- Stats and search form -->
         <div ng-show="vm.website" style="margin-top:50px;">
-          <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          <hr/>
+
+          <a class="btn btn-info middle" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Statistics
           </a>
           <div class="collapse" id="collapseExample">
@@ -53,9 +53,11 @@
             </div>
           </div>
 
-          <div class="panel">
-            <h4 style="margin-top:50px;">
-              Search by description, or if searching by price, place $ in front.
+          <hr/>
+
+          <div>
+            <h4 style="margin-top:20px;">
+              Search results by description, price or rating (if searching by price place $ in front)
             </h4>
             <form>
               <div class="form-group">
@@ -65,13 +67,14 @@
                 </div>
               </div>
             </form>
+
+            <hr/>
           </div>
 
 
         </div>
-
-
       </div>
+
 
 
       <div class="row">
@@ -79,7 +82,7 @@
         <!-- Amazon -->
         <div class="col-sm-4">
           <div class="row">
-            <h2 ng-show="vm.website">Amazon.com</h2>
+            <h2 style="margin-left:15px;" ng-show="vm.website">Amazon.com</h2>
             <ul ng-if="vm.items">
                 <li ng-repeat="item in vm.items | filter:vm.searchBy ">
                   <div class="col-sm-10 col-width">
@@ -110,7 +113,7 @@
         <!-- Nike  -->
         <div class="col-sm-5 nike">
           <div class="row">
-            <h2 ng-show="vm.website">Nike.com</h2>
+            <h2 style="margin-left:15px;" ng-show="vm.website">Nike.com</h2>
             <ul ng-if="vm.itemsn">
                 <li ng-repeat="item in vm.itemsn | filter:vm.searchBy ">
                   <div class="col-sm-12 col-width">
