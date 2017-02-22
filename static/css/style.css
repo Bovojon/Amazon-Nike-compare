@@ -1,6 +1,10 @@
 body {
   min-height: 100%;
 }
+.mainBody {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
 .navbar {
   background-color:#232f3e !important;
   border-radius: 0px !important;
@@ -85,21 +89,18 @@ img {
 }
 
 /*D3 bar*/
-.bar{
-    fill: steelblue;
-  }
-
-  .bar:hover{
-    fill: brown;
-  }
-
-	.axis {
-	  font: 10px sans-serif;
-	}
-
-	.axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
+.bar {
+  fill: steelblue;
+}
+.bar:hover{
+  fill: brown;
+}
+.axis {
+  font: 10px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}

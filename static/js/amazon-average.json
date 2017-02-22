@@ -1,11 +1,11 @@
 {
-    "average_high": 177, 
-    "average_indv": 75, 
-    "average_low": 59, 
-    "average_mens_high": 172, 
-    "average_mens_indv": 79, 
-    "average_mens_low": 63, 
-    "average_womens_high": 227, 
-    "average_womens_indv": 99, 
-    "average_womens_low": 62
+    "average_high": 150, 
+    "average_indv": 47, 
+    "average_low": 78, 
+    "average_mens_high": 167, 
+    "average_mens_indv": 127, 
+    "average_mens_low": 87, 
+    "average_womens_high": "No higher (ranging) prices for women's products.", 
+    "average_womens_indv": "No individual prices for women's products.", 
+    "average_womens_low": "No lower (ranging) prices for women's products."
 }
